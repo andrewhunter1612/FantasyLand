@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import people.spellcaster.Spellcaster;
 
+import static org.junit.Assert.assertEquals;
+
 public class SpellcasterTest {
 
     Spellcaster spellcaster;
