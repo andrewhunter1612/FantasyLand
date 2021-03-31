@@ -1,6 +1,5 @@
 package people.spellcaster;
 
-import behaviours.IDamage;
 import people.Player;
 
 public class Spellcaster extends Player {
@@ -8,30 +7,30 @@ public class Spellcaster extends Player {
     private SpellType spell;
     private CreatureType creature;
 
-    public Spellcaster(String name, SpellcasterType spellcasterType, SpellType spell, CreatureType creature) {
+    public Spellcaster(String name, SpellcasterType spellcasterType, CreatureType creature) {
         super(name);
         this.spellcasterType = spellcasterType;
-        this.spell = spell;
+        this.spell = null;
         this.creature = creature;
     }
 
-    public void changeSpell(SpellType spell) {
-        this.spell = spell;
+    public int attack(SpellType spellType){
+        return spellType.getDamage();
     }
 
     public void changeCreature(CreatureType creature) {
         this.creature = creature;
     }
 
-    public SpellcasterType getSpellcasterType() {
-        return spellcasterType;
+    public String getSpellcasterType() {
+        return spellcasterType.getName();
     }
 
-    public SpellType getSpell() {
-        return spell;
+    public String getSpell() {
+        return spell.getName();
     }
 
-    public CreatureType getCreature() {
-        return creature;
+    public String getCreature() {
+        return creature.getName();
     }
 }
