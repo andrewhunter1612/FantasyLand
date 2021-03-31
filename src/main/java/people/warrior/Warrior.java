@@ -1,5 +1,6 @@
 package people.warrior;
 
+import behaviours.IPlayer;
 import people.Player;
 
 public class Warrior extends Player {

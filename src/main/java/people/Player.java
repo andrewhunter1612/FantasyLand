@@ -1,6 +1,8 @@
 package people;
 
-public abstract class Player {
+import behaviours.IPlayer;
+
+public abstract class Player implements IPlayer{
     private String name;
     private int healthPoints;
 

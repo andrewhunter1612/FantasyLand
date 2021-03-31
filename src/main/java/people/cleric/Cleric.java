@@ -2,7 +2,7 @@ package people.cleric;
 
 import people.Player;
 
-public class Cleric extends Player {
+public class Cleric extends Player{
     private HealingType healingType;
 
     public Cleric(String name) {
