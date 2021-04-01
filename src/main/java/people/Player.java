@@ -6,11 +6,13 @@ public abstract class Player implements IPlayer{
     private String name;
     private int healthPoints;
     private double money;
+    private boolean dead;
 
     public Player(String name) {
         this.name = name;
         this.healthPoints = 100;
         this.money = 0;
+        this.dead = false;
     }
 
     public double getMoney() {
@@ -19,6 +21,16 @@ public abstract class Player implements IPlayer{
 
     public void addMoney(double money) {
         this.money += money;
+    }
+
+    public void checkIfDead(){
+        if (this.healthPoints <=0){
+            this.dead = true;
+        }
+    }
+
+    public boolean isDead() {
+        return dead;
     }
 
     public String getName() {

@@ -2,8 +2,6 @@ package room;
 
 import behaviours.IRoomItem;
 
-import java.util.Random;
-
 public class Room {
 
     private int roomNumber;

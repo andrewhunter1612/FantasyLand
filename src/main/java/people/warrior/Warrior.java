@@ -1,8 +1,9 @@
 package people.warrior;
 
+import behaviours.Fighter;
 import people.Player;
 
-public class Warrior extends Player {
+public class Warrior extends Player implements Fighter {
     private WarriorType warriorType;
     private WeaponType weaponType;
 
@@ -18,5 +19,10 @@ public class Warrior extends Player {
 
     public String getWeaponType() {
         return weaponType.getWeapon();
+    }
+
+    @Override
+    public int attack() {
+        return this.weaponType.getDamage();
     }
 }

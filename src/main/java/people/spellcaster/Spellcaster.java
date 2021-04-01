@@ -14,8 +14,8 @@ public class Spellcaster extends Player {
         this.creature = creature;
     }
 
-    public int attack(SpellType spellType){
-        return spellType.getDamage();
+    public int attack(){
+        return this.spell.getDamage();
     }
 
     public void changeCreature(CreatureType creature) {

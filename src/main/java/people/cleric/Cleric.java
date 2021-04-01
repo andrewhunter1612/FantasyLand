@@ -1,13 +1,14 @@
 package people.cleric;
 
+import behaviours.Healer;
 import people.Player;
 
-public class Cleric extends Player{
+public class Cleric extends Player implements Healer {
     private HealingType healingType;
 
-    public Cleric(String name) {
+    public Cleric(String name, HealingType healingType) {
         super(name);
-        this.healingType = null;
+        this.healingType = healingType;
     }
 
     public String getHealingType() {
@@ -18,4 +19,8 @@ public class Cleric extends Player{
         this.healingType = healingType;
     }
 
+    @Override
+    public int heal() {
+        return this.healingType.getHealing();
+    }
 }

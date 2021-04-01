@@ -13,7 +13,7 @@ public class ClericTest {
 
     @Before
     public void before() {
-        cleric = new Cleric("Harrison");
+        cleric = new Cleric("Harrison", HealingType.CALPOL);
     }
 
     @Test
